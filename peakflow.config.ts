@@ -5,12 +5,12 @@ export default defineConfig({
    * The GitHub repository of this project. Your code will be hosted via JSDelivr.
    */
   repository: {
-    owner: "username",
-    name: "project",
+    owner: "peakpointch",
+    name: "phranakhon",
   },
-  server: {
-    webflowSubdomain: "YOUR_WEBFLOW_SUBDOMAIN",
-    port: 3000,
+  devServer: {
+    webflowSubdomain: "phra-nakhon",
+    port: 3001,
     livereload: true,
     watchList: ["./src/"],
   },

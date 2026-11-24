@@ -1,13 +1,22 @@
-import { onReady } from "@xatom/core";
-import { app } from "./routes";
+import { onReady, WFRoute } from "@xatom/core";
+import { peakflow } from "peakflow";
+import { initWfVideo } from "./modules/wfvideo";
 
 onReady(() => {
   global();
 
-  app();
+  const videoRoutes: string[] = ["/", "/thai-garden"]
+  for (const path of videoRoutes) {
+
+    new WFRoute(path).execute(() => {
+      initWfVideo()
+    })
+  }
 });
 
 /**
  * Code that runs on all pages
  */
-function global(): void {}
+function global(): void {
+  // peakflow.execute("dateflow")
+}
