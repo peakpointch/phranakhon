@@ -5,7 +5,7 @@ import { initWfVideo } from "./modules/wfvideo";
 onReady(() => {
   global();
 
-  const videoRoutes: string[] = ["/", "/thai-garden"]
+  const videoRoutes: string[] = ["/", "/thai-garden", "/en/restaurant", "/en/thai-garden"]
   for (const path of videoRoutes) {
 
     new WFRoute(path).execute(() => {
